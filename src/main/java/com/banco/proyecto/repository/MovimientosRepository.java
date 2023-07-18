@@ -16,11 +16,4 @@ public interface MovimientosRepository extends JpaRepository<Movimientos, Long> 
             + "INNER JOIN BAN_TIPO_MOVIMIENTO ON BAN_TIPO_MOVIMIENTO.idTipoMovimiento = BAN_MOVIMIENTOS.idTipoMovimiento\r\n"
             + "WHERE BAN_PERSONA.codigo=:codigo", nativeQuery = true)
     List<OutputMovimientosDto> getMovimientosByCodigo(@Param("codigo") String codigo);
-
-    @Query(value  = "SELECT BAN_TIPO_MOVIMIENTO.tipoMovimiento, BAN_MOVIMIENTOS.valorMovimiento, \r\n"
-            + "BAN_MOVIMIENTOS.detalle FROM BAN_MOVIMIENTOS \r\n"
-            + "INNER JOIN BAN_PERSONA ON BAN_PERSONA.idPersona = BAN_MOVIMIENTOS.idPersona \r\n"
-            + "INNER JOIN BAN_TIPO_MOVIMIENTO ON BAN_TIPO_MOVIMIENTO.idTipoMovimiento = BAN_MOVIMIENTOS.idTipoMovimiento\r\n"
-            + "WHERE BAN_PERSONA.codigo='012345678'", nativeQuery = true)
-    List<Object> getMovimientos();
 }

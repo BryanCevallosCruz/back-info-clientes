@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.banco.proyecto.model.Persona;
 import com.banco.proyecto.service.PersonaService;
+import com.banco.proyecto.service.dto.ClienteDto;
 import com.banco.proyecto.service.dto.EmpleadoDto;
 import com.banco.proyecto.service.dto.OutputEmpleadoDto;
 import com.banco.proyecto.service.dto.OutputMovimientosDto;
@@ -38,11 +39,6 @@ public class PersonaController {
         return service.getMovimientosPersona(codigo);
     }
 
-    @GetMapping(value="/v2",produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Object> movimientosPorCodigo(){
-        return service.getMovimiento();
-    }
-
     @GetMapping(value="/empleado/{codigo}",produces = MediaType.APPLICATION_JSON_VALUE)
     public OutputEmpleadoDto empleadosPorCodigo(@PathVariable("codigo") String codigo){
         return service.getEmpleadoPorCodigo(codigo);
@@ -51,5 +47,10 @@ public class PersonaController {
     @GetMapping(value="/empleado/info/{codigo}",produces = MediaType.APPLICATION_JSON_VALUE)
     public EmpleadoDto infoEmpleadosPorCodigo(@PathVariable("codigo") String codigo){
         return service.getInfoEmpleadoByCodigo(codigo);
+    }
+
+    @GetMapping(value="/cliente/info/{codigo}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public ClienteDto infoClientePorCodigo(@PathVariable("codigo") String codigo){
+        return service.getInfoClienteByCodigo(codigo);
     }
 }

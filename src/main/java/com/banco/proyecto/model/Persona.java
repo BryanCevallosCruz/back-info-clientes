@@ -1,6 +1,7 @@
 package com.banco.proyecto.model;
 
-import java.util.Date;
+// import java.util.Date;
+import java.sql.Date;
 import java.math.BigDecimal;
 
 import jakarta.persistence.*;
