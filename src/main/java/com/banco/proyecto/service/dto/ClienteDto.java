@@ -1,7 +1,6 @@
 package com.banco.proyecto.service.dto;
 
 import java.math.BigDecimal;
-import java.sql.Date;
 import java.util.List;
 
 import lombok.AllArgsConstructor;

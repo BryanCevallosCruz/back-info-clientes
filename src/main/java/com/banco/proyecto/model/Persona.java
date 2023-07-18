@@ -1,8 +1,6 @@
 package com.banco.proyecto.model;
 
-// import java.util.Date;
 import java.sql.Date;
-import java.math.BigDecimal;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -38,9 +36,5 @@ public class Persona {
 
     @Column(name = "fechaCreacionCuenta")
     private Date fechaCreacionCuenta;
-
-    @Column(name = "saldoActual")
-    private BigDecimal saldoActual;
-
 
 }

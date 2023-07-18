@@ -6,10 +6,8 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.sql.Date;
 import java.text.SimpleDateFormat;
 
-import com.banco.proyecto.model.Empleado;
 import com.banco.proyecto.model.Persona;
 import com.banco.proyecto.repository.EmpleadoRepository;
 import com.banco.proyecto.repository.MovimientosRepository;
