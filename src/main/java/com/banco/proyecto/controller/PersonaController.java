@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.banco.proyecto.model.Persona;
 import com.banco.proyecto.service.PersonaService;
+import com.banco.proyecto.service.dto.EmpleadoDto;
 import com.banco.proyecto.service.dto.OutputEmpleadoDto;
 import com.banco.proyecto.service.dto.OutputMovimientosDto;
 
@@ -47,4 +48,8 @@ public class PersonaController {
         return service.getEmpleadoPorCodigo(codigo);
     }
 
+    @GetMapping(value="/empleado/info/{codigo}",produces = MediaType.APPLICATION_JSON_VALUE)
+    public EmpleadoDto infoEmpleadosPorCodigo(@PathVariable("codigo") String codigo){
+        return service.getInfoEmpleadoByCodigo(codigo);
+    }
 }

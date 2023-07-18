@@ -6,5 +6,5 @@ public interface OutputEmpleadoDto {
     String getApellido();
     Long getEdad();
     String getNumeroCuenta();
-    String getcargoEmpleado();
+    String getCargoEmpleado();
 }

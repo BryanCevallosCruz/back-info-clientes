@@ -3,6 +3,7 @@ package com.banco.proyecto.service;
 import java.util.List;
 
 import com.banco.proyecto.model.Persona;
+import com.banco.proyecto.service.dto.EmpleadoDto;
 import com.banco.proyecto.service.dto.OutputEmpleadoDto;
 import com.banco.proyecto.service.dto.OutputMovimientosDto;
 
@@ -11,4 +12,5 @@ public interface PersonaService {
     List<OutputMovimientosDto> getMovimientosPersona(String codigo);
     List<Object> getMovimiento();
     OutputEmpleadoDto getEmpleadoPorCodigo(String codigo);
+    EmpleadoDto getInfoEmpleadoByCodigo(String codigo);
 }
